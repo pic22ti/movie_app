@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Movie.css';
 
+// state가 필요하지 않으므로 함수형 컴포넌트를 사용
 function Movie({ year, title, genres, summary, poster }) {
   return (
     <div className="movie">
@@ -14,12 +15,14 @@ function Movie({ year, title, genres, summary, poster }) {
           })}
         </ul>
         <p className="movie_year">{year}</p>
+        {/* 180만 잘라서 보여줌 */}
         <p className="movie_summary">{summary.slice(0, 180)}...</p>
       </div>
     </div>
   );
 }
 
+// 넘어와야 하는 데이터의 타입을 정의하고 관리하기 위해 proptypes 사용
 Movie.propTypes = { 
   year: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
