@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.nav {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.nav .nav_link {
+  background-color: #2e2d3b;
+  padding: 7px 20px;
+  margin: 0 5px;
+  border-radius: 25px;
+  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}

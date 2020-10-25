@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.movie {
+  background-color: #242331;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 25px;
+  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.movie img {
+  border-radius: 10px;
+  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.7);
+}
+
+.movie .movie_title {
+  padding-top: 20px;
+}
+.movie .movie_year {
+  display: inline-block;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #888;
+}
+.movie .movie_genres {
+  display: inline-block;
+}
+.movie .movie_genres .movie_genre {
+  display: inline-block;
+  padding-top: 8px;
+  list-style: none;
+  font-size: 14px;
+  color: #888;
+}
+.movie .movie_genres .movie_genre::after {
+  content: "/";
+  display: inline-block;
+  padding: 0 3px;
+}
+.movie .movie_genres .movie_genre:last-child::after {
+  display: none;
+}
+
+.movie .movie_summary {
+  padding: 20px 10px;
+  font-weight: lighter;
+}

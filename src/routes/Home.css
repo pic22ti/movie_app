@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.app_title {
+  padding-top: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  color: #888;
+  text-align: center;
+}

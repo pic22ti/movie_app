@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.about_title {
+  padding-top: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.about_container {
+  background-color: #242331;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 25px;
+  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+}
