@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Movie.css';
+import { Link } from 'react-router-dom';
 
 // state가 필요하지 않으므로 함수형 컴포넌트를 사용
 function Movie({ year, title, genres, summary, poster }) {
   return (
     <div className="movie">
-      <img src={poster} alt={title} title={title}/>
-      <div className="movie_data">
-        <h2 className="movie_title">{title}</h2>
-        <ul className="movie_genres">
-          {genres.map((genre, index) => {
-            return <li key={index} className="movie_genre">{genre}</li>;
-          })}
-        </ul>
-        <p className="movie_year">{year}</p>
-        {/* 180만 잘라서 보여줌 */}
-        <p className="movie_summary">{summary.slice(0, 180)}...</p>
-      </div>
+      <Link to={{ pathname: '/movie_detail', state: { year, title, summary, poster, genres }}}>
+        {/* 포스터 이미지 */}
+        <img src={poster} alt={title} title={title}/>
+        {/* 영화 데이터 */}
+        <div className="movie_data">
+          <h2 className="movie_title">{title}</h2>
+          <ul className="movie_genres">
+            {genres.map((genre, index) => {
+              return <li key={index} className="movie_genre">{genre}</li>;
+            })}
+          </ul>
+          <p className="movie_year">{year}</p>
+          {/* 줄거리는 120자만 잘라서 보여줌 */}
+          <p className="movie_summary">{summary.slice(0, 120)}...</p>
+        </div>
+      </Link>
     </div>
   );
 }
